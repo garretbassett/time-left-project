@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Time Left Project</title>
+    <link rel="stylesheet" href="main.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  </head>
+
+  <body>
+    
+    <div id="main-container">
+            
+        <div class="prompt-container">
+
+            <p class="enter-birthday">I was born on <input id="birthmonth" placeholder="January" autofocus></input> 
+                                                    <input id="birthday" placeholder="1"></input>, 
+                                                    <input id="birthyear" placeholder="1990"></input>.<button class="go">Go --></button></p>
+
+        </div>
+
+        <div class="viz-container">
+          
+            <div class="legend">
+                <div class="lived">
+                <span class="square"></span>
+                Weeks lived
+            </div>
+
+            <div class="left">
+                <span class="square"></span>
+                Weeks left
+            </div>
+
+            <div class="year-marker">
+                1 year
+            </div>
+
+          </div>
+
+          <div id="squares-total">
+              <div class="chunk"></div>
+              <div class="remainder"></div>
+          </div>
+
+          <div id="squares-lived">
+              <div class="chunk"></div>
+              <div class="remainder"></div>
+          </div>
+
+          <!-- <div class="year-marker">
+              1 year
+          </div> -->
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+
+    <script src="utils.js"></script>
+    <script src="main.js"></script>
+  
+  </body>
+
+</html>

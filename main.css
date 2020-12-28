@@ -1,0 +1,133 @@
+/* vars */
+/* resets */
+body, html, iframe, div, input {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  }
+
+body {
+  background: white;
+  display: block;
+  font-family: 'Courier New', Courier, monospace; 
+}
+
+.prompt-container {
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: 30vh;
+  position: relative; }
+
+input {
+  background: white;
+  font-weight: bold;
+ }
+
+.enter-birthday {
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  color: #888;
+  font-size: 36px; 
+}
+  
+.enter-birthday input {
+    text-align: center;
+    color: forestgreen;
+    font-size: 36px;
+    border-radius: 30px;
+    transition: background-color .3s; }
+    .enter-birthday input#birthmonth {
+      width: 6em; }
+    .enter-birthday input#birthday {
+      width: 1.5em; }
+    .enter-birthday input#birthyear {
+      width: 3em; }
+    .enter-birthday input:hover input:focus {
+      background: #eee; 
+      outline: none; 
+    }
+    .enter-birthday input:focus {
+      background: #eee;
+      outline: none; 
+    }
+    
+
+button.go {
+  font-family: 'Courier New', Courier, monospace;
+  /* display: block; */
+  margin: 0 auto;
+  margin-left: 10vw;
+  font-size: 36px;
+  width: 5em;
+  height: 1.5em;
+  color: forestgreen;
+  border: 2px solid forestgreen;
+  /* border-radius: 8px; */
+  background: transparent;
+  transition: color .1s;
+  cursor: pointer;
+  line-height: 1.5em; }
+  button.go:hover {
+    color: #e9e9e9;
+    background: forestgreen; }
+  button.go:active {
+    opacity: 0.9; }
+
+
+.legend {
+  width: 75%;
+  height: 50px;
+  color: forestgreen;
+  font-size: 16px; 
+  /* margin-top: 100px; */
+  height: 50px;
+}
+  .legend .lived, .legend .left {
+    /* float: left; */
+    display: inline-block; 
+  }
+  .legend .year-marker {
+    text-align: right;
+    /* float: right; */
+  }
+  .legend .lived, .legend .left {
+    margin-right: 12vw; }
+  .legend .square {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 5px;
+    background-size: 10px 10px;
+    line-height: 16px; }
+  .legend .lived .square {
+    background-image: url("day_lived.png"); }
+  .legend .left .square {
+    background-image: url("day_left.png"); }
+
+
+.viz-container {
+  width: 75vw;
+  /* width:  1000px; */
+  margin: 0 auto;
+  position: relative; }
+  .viz-container #squares-lived, .viz-container #squares-total {
+    height: 0;
+    overflow: visible;
+    position: relative;
+    box-sizing: border-box; }
+  .viz-container #squares-lived > div {
+    background: url("day_lived.png") repeat; 
+    background-size: 9.615px; }
+  .viz-container #squares-total > div {
+    /* padding: 5px; */
+    background: url("day_left.png") repeat;
+    background-size: 9.615px; }
+  .viz-container .chunk {
+    width: 100%;
+    height: 0;
+    }
+  .viz-container .remainder {
+    height: 9.615px;
+    width: 0;
+    }
